@@ -7,7 +7,7 @@ function App() {
   return (
     <div dir="rtl" style={{ height: "100%" }}>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/health-care-info" element={<MainPage />} />
         <Route path="/mainpage" element={<MainPage />} />
         <Route path="/overview" element={<Overview />} />
       </Routes>
