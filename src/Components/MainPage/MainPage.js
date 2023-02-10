@@ -30,9 +30,20 @@ const MainPage = () => {
       }
     );
 
-    axios.get(tempApi).then((response) => {
+    axios({
+      method: 'get',
+      withCredentials: false,
+      url: tempApi,
+    }).then((response) => {
       setRowData(response.data.data);
+
     });
+    // axios.get(tempApi).then((response) => {
+    //   setRowData(response.data.data);
+
+    // }
+
+    // );
   };
 
   useEffect(() => {
@@ -80,7 +91,7 @@ const MainPage = () => {
               size={20}
               onClick={() =>
                 navigate("/overview", {
-                  state: { data: params.data}
+                  state: { data: params.data }
                 })
               }
             />
