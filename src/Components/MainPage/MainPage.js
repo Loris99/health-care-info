@@ -29,7 +29,6 @@ const MainPage = () => {
         return dataFilters[matched];
       }
     );
-    // axios.defaults.headers.post['Access-Control-Allow-Origin'] = "*";
     axios({
       method: 'get',
       withCredentials: true,
@@ -43,12 +42,7 @@ const MainPage = () => {
       setRowData(response.data.data);
 
     });
-    // axios.get(tempApi).then((response) => {
-    //   setRowData(response.data.data);
-
-    // }
-
-    // );
+   
   };
 
   useEffect(() => {
