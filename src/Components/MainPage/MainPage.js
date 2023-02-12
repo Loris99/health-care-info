@@ -29,11 +29,16 @@ const MainPage = () => {
         return dataFilters[matched];
       }
     );
-
+    // axios.defaults.headers.post['Access-Control-Allow-Origin'] = "*";
     axios({
       method: 'get',
-      withCredentials: false,
+      withCredentials: true,
       url: tempApi,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+
+      }
     }).then((response) => {
       setRowData(response.data.data);
 
